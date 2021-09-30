@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #ffdce7;
+}
+@mixin Input {
+  margin: 1.25rem 0rem;
+  width: 700px;
+  height: 6vh;
+  background-color: rgba(255, 255, 255, 0.86);
+  border: none;
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 20px;
+}
+.container {
+  margin: 100px auto;
+  max-width: 700px;
+  div.header {
+    div.title {
+      font-size: 2.25rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  div.form {
+    display: flex;
+    flex-direction: column;
+
+    div.formBox {
+      label.label {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0.5rem 0;
+        span.label--required {
+          color: rgb(255, 0, 21);
+          font-size: 1.25rem;
+        }
+      }
+      .input {
+        @include Input;
+      }
+
+      input.input:focus {
+        outline: none;
+      }
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        box-shadow: 0 0 0px 1000px rgba(255, 241, 117, 0.507) inset;
+        -webkit-text-fill-color: #2072ee;
+      }
+      input#position {
+        @include Input;
+      }
+      input::-webkit-calendar-picker-indicator {
+        opacity: 100;
+        color: gray;
+      }
+      div.inputBox-radio {
+        display: inline-flex;
+        align-items: center;
+        margin: 1.25rem 0rem;
+        position: relative;
+        input.radio {
+          visibility: hidden;
+        }
+        input.radio::before {
+          position: absolute;
+          top: 2px;
+          left: 0;
+          content: "";
+          width: 16px;
+          height: 16px;
+          border: 2px solid #a6a6a6;
+          background-color: white;
+          border-radius: 50%;
+          visibility: visible;
+          display: inline-block;
+        }
+        input.radio:checked::before {
+          background-color: rgba(255, 246, 26, 0.78);
+          box-shadow: inset 0 0 0 2px white;
+          border: 2px solid rgba(255, 246, 26, 0.78);
+        }
+        label {
+          font-size: 1.2rem;
+          margin: 0 1rem;
+        }
+      }
+    }
+    textarea {
+      resize: none;
+      height: 15vh;
+      margin: 1.25rem 0rem;
+      width: 700px;
+      background-color: rgba(255, 255, 255, 0.86);
+      border: none;
+      padding: 0.2rem 0.5rem;
+      font-size: 1rem;
+      border-radius: 20px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      width: 8vw;
+      align-self: center;
+      padding: 0.25rem 0.5rem;
+      height: 5vh;
+      font-size: 1rem;
+      border: none;
+      box-shadow: inset 0 0 4px rgb(145, 228, 255);
+      border-radius: 10px;
+      background-color: rgb(179, 236, 255);
+      font-weight: bold;
+    }
+  }
+}

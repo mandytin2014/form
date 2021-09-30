@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>跨平台網頁設計課程報名調查</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">跨平台網頁設計課程報名調查</div>
+      </div>
+      <div class="form">
+        <div class="formBox">
+          <label for="name" class="label"
+            >姓名:
+            <span class="label--required">*</span>
+          </label>
+          
+            <input
+              type="text"
+              class="input"
+              id="name"
+              name="name"
+              placeholder="請輸入真實姓名"
+              required
+            />
+            
+        </div>
+
+        <div class="formBox">
+          <label for="gender" class="label"
+            >性別:
+            <span class="label--required">*</span>
+          </label>
+          <div class="inputBox-radio">
+            <input type="radio" class="radio" id="male" name="gender" value="male" checked />
+            <label for="male" class="checkbox__label">男性</label>
+          </div>
+          <div class="inputBox-radio">
+            <input
+              type="radio"
+              class="radio"
+              id="female"
+              value="female"
+              name="gender"
+              required
+            />
+            <label for="female" class="checkbox__label">女性</label>
+          </div>
+          <div class="inputBox-radio">
+            <input type="radio" value="other" class="radio" id="other" name="gender" />
+            <label for="other" class="checkbox__label">其他</label>
+          </div>
+          <div class="formBox">
+            <label for="telephone" class="label">
+              連絡電話:
+              <span class="label--required">*</span>
+            </label>
+            <input
+              type="tel"
+              class="input"
+              name="telephone"
+              id="telephone"
+              placeholder="請輸入手機號碼"
+              required
+            />
+          </div>
+          <div class="formBox">
+            <label for="email" class="label"
+              >聯絡信箱:
+              <span class="label--required">*</span>
+            </label>
+            <input
+              class="input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="請輸入聯絡信箱"
+              required
+            />
+          </div>
+          <div class="formBox">
+            <label for="level" class="label"
+              >目前程度:
+              <span class="label--required">*</span>
+            </label>
+            <div class="inputBox-radio">
+              <input class="radio" type="radio" name="level" id="senior" value="senior" required />
+              <label for="senior" class="checkbox__label"
+                >開發經驗豐富(一年以上)</label
+              >
+            </div>
+            <div class="inputBox-radio">
+              <input class="radio" type="radio" name="level" id="junior" value="junior" />
+              <label for="junior" class="checkbox__label"
+                >開發新手(一年以內)</label
+              >
+            </div>
+            <div class="inputBox-radio">
+              <input type="radio" class="radio" id="beginner" name="level" value="beginner" />
+              <label for="beginner" class="checkbox_label">完全沒經驗</label>
+            </div>
+          </div>
+          <div class="formBox">
+            <label for="lesson" class="label"
+              >欲報名的課程:
+              <span class="label--required">*</span>
+            </label>
+            <div class="inputBox">
+                <select  name="lesson" id="lesson" class="input">
+                <option value="7/3 10:00-15:00 HTML, CSS基礎切版">7/3 10:00-15:00 HTML, CSS基礎切版</option>
+                <option value="7/4 13:00-17:00 HTML, CSS基礎切版">7/4 13:00-17:00 HTML, CSS基礎切版</option>
+                <option value="7/10 10:00-15:00 HTML, CSS基礎切版">7/10 10:00-15:00 HTML, CSS基礎切版</option>
+                <option value="7/11 13:00-17:00 HTML, CSS基礎切版">7/11 13:00-17:00 HTML, CSS基礎切版</option>
+                <option value="7/10 10:00-15:00
+                  （系列課程4週）wordpress客製化開發">7/10 10:00-15:00
+                  （系列課程4週）wordpress客製化開發</option>
+                <option value="8/7 9:00-16:00 網頁開發流程">8/7 9:00-16:00 網頁開發流程</option>
+                <option value="8/14 9:00-16:00 網頁開發流程">8/14 9:00-16:00 網頁開發流程</option>
+      
+              </select>
+            </div>
+            
+            </div>
+          </div>
+          <div class="formBox">
+            <label class="label"
+              >報名動機(可複選):
+              <span class="label--required">*</span>
+            </label>
+            <div class="inputBox-radio">
+              <input type="checkbox" name="motivation" id="motivation" class="radio" value="work" />
+              <label  for="motivation" class="checkbox_label">工作所需</label>
+            </div>
+            <div class="inputBox-radio">
+              <input type="checkbox" name="motivation" value="hobby" id="motivation" class="radio" />
+              <label for="motivation" class="checkbox_label">個人興趣</label>
+            </div>
+            <div class="inputBox-radio">
+              <input
+                type="checkbox"
+                name="motivation"
+                id="motivation"
+                value="changeJob"
+                class="radio"
+              />
+              <label for="motivation" class="checkbox_label">考慮轉職</label>
+            </div>
+            <div class="inputBox-radio">
+              <input type="checkbox" name="skill" id="skill" class="radio" />
+              <label for="skill" class="checkbox_label">增加專長</label>
+            </div>
+          </div>
+          <div class="formBox">
+            <label for="position" class="label">嚮往擔任的職位:</label>
+            <input
+              list="position-list"
+              class="input"
+              type="text"
+              name="position"
+              id="position"
+              placeholder="選擇以下職業或者自行輸入"/>
+
+            
+            <datalist id="position-list">
+             <option value=""></option>
+              <option value="網頁相關工作者(前端、後端、UI/UX、網路行銷等)">
+                網頁相關工作者(前端、後端、UI/UX、網路行銷等)
+              </option>
+              <option value="軟體工程師">軟體工程師</option>
+              <option value="視覺設計相關">視覺設計相關</option>
+              <option value="行銷企劃、PM">行銷企劃、PM</option>
+            </datalist>
+          </div>
+          <div class="formBox">
+            <label for="suggestion" class="label">悄悄話:</label>
+            <textarea
+              name="suggestion"
+              id="suggestion"
+              placeholder="任何課程上的建議、想多了解課程上的資訊或者是單純想說什麼話，都歡迎留言告訴我們喔！"
+            ></textarea>
+          </div>
+          <button id="btn" type="submit">送出</button>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
